@@ -24,5 +24,6 @@ while game_is_on:
     time.sleep(0.05)
     screen.update()
 
+x = ('test')
 
 screen.exitonclick()
