@@ -1,8 +1,7 @@
 from turtle import Turtle
 
 STARTING_POSITION = (0, -240)
-MOVE_DISTANCE = 10
-FINISH_LINE_Y = 280
+MOVE_DISTANCE = 15
 
 
 class Player(Turtle):
@@ -10,6 +9,7 @@ class Player(Turtle):
         super().__init__()
         self.shape("square")
         self.shapesize(0.5, 3)
+        self.color("white")
         self.penup()
         self.goto(STARTING_POSITION)
 
@@ -24,4 +24,7 @@ class Player(Turtle):
     def go_to_start(self):
         self.goto(0, -280)
 
-    # potentially create function to prevent player moving off of screen (left/right)
+    def hit_ball(self):
+        pass
+
+
