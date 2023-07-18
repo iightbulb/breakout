@@ -11,6 +11,7 @@ class Ball(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=1)
         self.x_move = 3
         self.y_move = 3
+        self.move_speed = 0.01
 
     # continuously move ball
     def move_ball(self):
@@ -34,3 +35,9 @@ class Ball(Turtle):
     def reset_game(self):
         self.goto(0, 100)
         self.bounce_x()
+        print('You lost a life')
+
+    def new_level(self):
+        self.move_speed *= 0.9
+        print('New level')
+
